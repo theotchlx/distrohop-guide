@@ -1,1 +1,14 @@
 # Which directories to save, why and how
+
+To copy:
+
+- /etc (system-wide configuration, firewalls, services...). BE CAREFUL OF NOT OVERWRITING /etc/fstab WHEN DISTROHOPPING. Make a copy!
+- /var (databases, VM disks...: variable data files)
+- /home (home directory)
+- /root (Charlie's home directory)
+- /usr/local/ (locally-installed software)
+- If you customized your bootloader, the configuration at /boot. Note that timeout is customized from /etc/default/grub (and needs to run update-grub).
+- The list of installed software. For Arch, use `pacman -Qqe` and `pacman -Qqm`. Note that e contains m.
+
+Beware, rsync behaves like so: to copy (to the location) a directory's content, write it like "dir/". To copy the directory itself (and its content), write it like "dir".
+
