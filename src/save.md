@@ -15,3 +15,6 @@ Beware, rsync behaves like so: to copy (to the location) a directory's content, 
 Use `rsync -avz` to see... `--progress` to see... Beware, may make terminal render too long. Or smth.
 
 To save too: Partitions configurations: order, sizes, etc. That is, a copy of your `lsblk` output.
+
+You should first download the packages, before overriding /etc, or else the presence of configuration files may prevent installing some packages!  
+And due to having to download the packages before overriding /etc, make sure the packages you install and the ones whose configuration you saved are up-to-date with each other (same version), or else the config file smight have been updated, in which case overriding them would be a bad idea! So do a full update before distro-hopping.
