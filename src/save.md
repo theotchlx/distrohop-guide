@@ -21,3 +21,5 @@ And due to having to download the packages before overriding /etc, make sure the
 
 https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
 
+Also, the point of having partitions, such as /home, is to not have to format them between distrohops.
+
