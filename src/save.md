@@ -12,7 +12,8 @@ To copy:
 
 Beware, rsync behaves like so: to copy (to the location) a directory's content, write it like "dir/". To copy the directory itself (and its content), write it like "dir".
 
-Use `rsync -avz` to see... `--progress` to see... Beware, may make terminal render too long. Or smth.
+Use `rsync -avz` to see... `--progress` to see... Beware, may make terminal render too long. Or smth.  
+Add `--delete` so that it deletes files that are not present in the source directory.
 
 To save too: Partitions configurations: order, sizes, etc. That is, a copy of your `lsblk` output.
 
