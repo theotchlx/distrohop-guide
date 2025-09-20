@@ -1,5 +1,7 @@
 # Which directories to save, why and how
 
+First, clean your directories. Package manager cache, home trash, Docker cache, ...
+
 To copy:
 
 - /etc (system-wide configuration, firewalls, services...). BE CAREFUL OF NOT OVERWRITING /etc/fstab WHEN DISTROHOPPING. Make a copy!
@@ -20,7 +22,9 @@ To save too: Partitions configurations: order, sizes, etc. That is, a copy of yo
 You should first download the packages, before overriding /etc, or else the presence of configuration files may prevent installing some packages!  
 And due to having to download the packages before overriding /etc, make sure the packages you install and the ones whose configuration you saved are up-to-date with each other (same version), or else the config file smight have been updated, in which case overriding them would be a bad idea! So do a full update before distro-hopping.
 
-https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
+<https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache>
 
 Also, the point of having partitions, such as /home, is to not have to format them between distrohops.
 
+By the way, you can set Docker's cache to be somewhere else to not take up space in the root partition.
+Such as in your home partition.
